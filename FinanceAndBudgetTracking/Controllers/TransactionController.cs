@@ -1,11 +1,10 @@
-﻿using FinanceAndBudgetTracking.DTO;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using FinanceAndBudgetTracking.Services;
-using FinanceAndBudgetTracking.Data;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
-using FinanceAndBudgetTracking.Models;
+using FinanceAndBudgetTracking.DataLayer.Interfaces;
+using FinanceAndBudgetTracking.DataLayer.Entities;
+using FinanceAndBudgetTracking.Models.DTO;
 
 
 namespace FinanceAndBudgetTracking.Controllers

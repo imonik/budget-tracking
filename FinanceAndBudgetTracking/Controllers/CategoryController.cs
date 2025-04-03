@@ -1,8 +1,8 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using FinanceAndBudgetTracking.Data;
-using FinanceAndBudgetTracking.DTO;
-using FinanceAndBudgetTracking.Models;
+using FinanceAndBudgetTracking.DataLayer.Interfaces;
+using FinanceAndBudgetTracking.DataLayer.Entities;
+using FinanceAndBudgetTracking.Models.DTO;
 using FinanceAndBudgetTracking.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

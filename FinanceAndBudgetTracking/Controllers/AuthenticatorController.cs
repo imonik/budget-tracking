@@ -1,17 +1,12 @@
-﻿using System.Reflection;
-using System.Security.Claims;
-using FinanceAndBudgetTracking.Data;
-using FinanceAndBudgetTracking.DTO;
-using FinanceAndBudgetTracking.Models;
+﻿using System.Security.Claims;
 using FinanceAndBudgetTracking.Services;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using FinanceAndBudgetTracking.DataLayer.Interfaces;
+using FinanceAndBudgetTracking.Models.DTO;
+using FinanceAndBudgetTracking.DataLayer.Entities;
 
 namespace FinanceAndBudgetTracking.Controllers
 {
-
     [Route("api/auth")]
     [ApiController]
     public class AuthenticatorController : ControllerBase

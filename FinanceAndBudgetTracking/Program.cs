@@ -1,5 +1,7 @@
 ﻿using System.Text;
-using FinanceAndBudgetTracking.Data;
+using FinanceAndBudgetTracking.DataLayer.Interfaces;
+using FinanceAndBudgetTracking.DataLayer.Repositories;
+using FinanceAndBudgetTracking.DataLayer.Services;
 using FinanceAndBudgetTracking.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
