@@ -23,6 +23,15 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
