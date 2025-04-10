@@ -1,5 +1,5 @@
 ﻿@using FinanceAndBudgetTracking.UI.ViewModels
-@model LoginViewModel
+@model LoginRegisterViewModel
 
 @{
     ViewData["Title"] = "Home Page";
@@ -10,50 +10,60 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<div class="text-center container">
-    <div class="container text-center">
-        <div class="row align-items-start">
-            <div class="col">
-                <h2>Registration</h2>
-                <form asp-action="Registere" asp-controller="Home" method="post">
-                    <div class="form-group">
-                        <label asp-for="Email"></label>
-                        <input asp-for="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Password"></label>
-                        <input asp-for="Password" class="form-control" type="password" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <div class="dorm-go">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <!-- Login Panel -->
+        <div class="col-md-5">
+            <h3>Login</h3>
+            <form asp-action="Login" method="post">
+                <div class="mb-3">
+                    <label asp-for="LoginRequest.Email" class="form-label"></label>
+                    <input asp-for="LoginRequest.Email" class="form-control" />
+                    <span asp-validation-for="LoginRequest.Email" class="text-danger"></span>
+                </div>
 
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-            </div>
-            <div class="col">
-                <h2>Login</h2>
-                <form asp-action="Login" asp-controller="Home" method="post">
-                    <div class="form-group">
-                        <label asp-for="Email"></label>
-                        <input asp-for="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Password"></label>
-                        <input asp-for="Password" class="form-control" type="password" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
+                <div class="mb-3">
+                    <label asp-for="LoginRequest.Password" class="form-label"></label>
+                    <input asp-for="LoginRequest.Password" class="form-control" type="password" />
+                    <span asp-validation-for="LoginRequest.Password" class="text-danger"></span>
+                </div>
 
-                @section Scripts {
-                    @{
-                        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-                    }
-                }
-            </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+
+        <!-- Register Panel -->
+        <div class="col-md-5 offset-md-1">
+            <h3>Register</h3>
+            <form asp-action="Register" method="post">
+                <div class="mb-3">
+                    <label asp-for="LoginRegisterDTO.Email" class="form-label"></label>
+                    <input asp-for="LoginRegisterDTO.Email" class="form-control" />
+                    <span asp-validation-for="LoginRegisterDTO.Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LoginRegisterDTO.Password" class="form-label"></label>
+                    <input asp-for="LoginRegisterDTO.Password" class="form-control" type="password" />
+                    <span asp-validation-for="LoginRegisterDTO.Password" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LoginRegisterDTO.ConfirmPassword" class="form-label"></label>
+                    <input asp-for="LoginRegisterDTO.ConfirmPassword" class="form-control" type="password" />
+                    <span asp-validation-for="LoginRegisterDTO.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
         </div>
     </div>
 </div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

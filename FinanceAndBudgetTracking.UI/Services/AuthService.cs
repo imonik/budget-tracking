@@ -17,7 +17,7 @@ namespace FinanceAndBudgetTracking.UI.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<UserDTO> LoginAsync(LoginViewModel login)
+        public async Task<UserDTO> LoginAsync(LoginRequestDTO login)
         {
             var response = await _httpClient.PostAsJsonAsync("auth/login", login);
             if (response.IsSuccessStatusCode)
@@ -45,9 +45,16 @@ namespace FinanceAndBudgetTracking.UI.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> RegisterAsync(RegisterDTO register)
+        public async  Task<bool> RegisterAsync(RegisterDTO register)
         {
-            throw new NotImplementedException();
+            var response = await _httpClient.PostAsJsonAsync("auth/register", register);
+            if (response.IsSuccessStatusCode) 
+            {
+                
+            
+            }
+            
+            return response.IsSuccessStatusCode;
         }
         // Implement methods for authentication and authorization here
     }

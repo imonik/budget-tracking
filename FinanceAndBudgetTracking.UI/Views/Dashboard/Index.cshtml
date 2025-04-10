@@ -2,11 +2,24 @@
 @using FinanceAndBudgetTracking.Models.DTO
 @using FinanceAndBudgetTracking.UI.ViewModels
 
-@model UserDTO;
+@model DashboardViewModel;
 
 @{
     ViewData["Title"] = "Dashboard";
 }
 <div class="text-center">
-    <h1 class="display-4">Welcome After User Logged In @Model.Name! </h1>
+    <h1 class="display-4">Welcome After User Logged In @Model.User.Name! </h1>
+</div>
+<div>
+    <h2>Categories</h2>
+
+    <ul>
+       
+        @foreach (var category in Model.CategoryList)
+        {
+            <li>@category.Name</li>
+        }
+    </ul>
+
+
 </div>

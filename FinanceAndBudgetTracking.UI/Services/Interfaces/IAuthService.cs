@@ -6,7 +6,7 @@ namespace FinanceAndBudgetTracking.UI.Services.Interfaces
 {
     public interface IAuthService
     {
-        Task<UserDTO> LoginAsync(LoginViewModel login);
+        Task<UserDTO> LoginAsync(LoginRequestDTO login);
         Task<bool> RegisterAsync(RegisterDTO register);
         Task<bool> LogoutAsync();
     }

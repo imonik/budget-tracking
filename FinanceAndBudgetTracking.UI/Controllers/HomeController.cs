@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using FinanceAndBudgetTracking.UI.Models;
 using FinanceAndBudgetTracking.UI.Services.Interfaces;
 using FinanceAndBudgetTracking.UI.ViewModels;
+using FinanceAndBudgetTracking.Models.DTO;
+using Microsoft.Win32;
 
 namespace FinanceAndBudgetTracking.UI.Controllers;
 
@@ -23,20 +25,47 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Login(LoginViewModel model)
+    public async Task<IActionResult> Login(LoginRegisterViewModel model)
     {
         if (!ModelState.IsValid)
             return View(model);
 
-        var result = await _authService.LoginAsync(model);
-
+        var result = await _authService.LoginAsync(model.LoginRequest);
+        var viewModel = new LoginRegisterViewModel
+        {
+            LoginResponse = result,
+            LoginRegister = new RegisterDTO()
+        }
+        ;
         if (result.Success)
         {
             return RedirectToAction("Index", "Dashboard");
         }
 
+
         ModelState.AddModelError("", "Invalid login attempt");
         return View("Index",model);
+    }
+
+    public async Task<IActionResult> Register(LoginRegisterViewModel model)
+    {
+        if (!ModelState.IsValid)
+            return View(model);
+     
+        var result = await _authService.RegisterAsync(model.LoginRegisterDTO);
+        //var viewModel = new LoginRegisterViewModel
+        //{
+        //    LoginResponse = result,
+        //    LoginRegister = new RegisterDTO()
+        //};
+
+        if (result)
+        {
+            return RedirectToAction("Index", "Dashboard");
+        }
+        // Handle registration failure
+        ModelState.AddModelError("", "Invalid registration attempt");
+        return View("Index", model);
     }
 
     public IActionResult Privacy()

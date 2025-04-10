@@ -17,6 +17,12 @@ namespace FinanceAndBudgetTracking.UI
                 {
                     client.BaseAddress = new Uri("https://localhost:7025/api/");
                 });
+            builder.Services.AddHttpClient<IApiService, ApiService>()
+                .ConfigureHttpClient(client =>
+                {
+                    client.BaseAddress = new Uri("https://localhost:7025/api/");
+                });
+
             builder.Services.AddHttpContextAccessor();
 
             var app = builder.Build();
