@@ -81,7 +81,17 @@ namespace FinanceAndBudgetTracking.Controllers
             };
 
             var token = _jwtService.GenerateToken(model.Email, existingUser.AppUserId.ToString());
-            return Ok(new { Token = token });
+            var loginResponse = new LoginResponseDTO
+            {
+                Token = token,
+                User = new UserDTO
+                {
+                    AppUserId = existingUser.AppUserId,
+                    Name = existingUser.Name,
+                    Email = existingUser.Email
+                }
+            };
+            return Ok(loginResponse);
         }
 
         [HttpPost("logout")]

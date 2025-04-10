@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FinanceAndBudgetTracking.Controllers
 {
-    [Authorize]
+    ///[Authorize]
     [Route("api/budgets")]
     [ApiController]
     public class BudgetController : ControllerBase

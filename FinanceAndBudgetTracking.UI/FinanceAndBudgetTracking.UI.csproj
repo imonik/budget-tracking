@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceAndBudgetTracking.Models\FinanceAndBudgetTracking.Models.csproj" />
+  </ItemGroup>
+
 </Project>
