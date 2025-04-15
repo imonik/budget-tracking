@@ -1,10 +1,13 @@
-﻿@using Microsoft.AspNetCore.Http
+﻿@using FinanceAndBudgetTracking.Models.DTO
+@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
 @inject IHttpContextAccessor HttpContextAccessor
 
 @{
-    var user = HttpContextAccessor.HttpContext.User;
-    var isAuth = user.Identity?.IsAuthenticated ?? false;
-    var email = user.FindFirst("email")?.Value;
+    var userJson = HttpContextAccessor.HttpContext?.Session.GetString("AuthResponseUser");
+    var isAuth = !string.IsNullOrEmpty(userJson);
+    var user = isAuth ? JsonConvert.DeserializeObject<UserDTO>(userJson) : null;
+    var email = user?.Email ?? "";
 }
 
 <!DOCTYPE html>
@@ -39,13 +42,13 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Transactions" asp-action="Transactions">Transactions</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Transactions">Transactions</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Budgets" asp-action="Budgets">Budgets</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Categories">Categories</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="CategoriyManager">Categories</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Profile" asp-action="MyProfile">My Profile</a>

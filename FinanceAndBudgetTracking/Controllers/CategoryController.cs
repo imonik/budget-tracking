@@ -7,10 +7,11 @@ using FinanceAndBudgetTracking.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using FinanceAndBudgetTracking.API.Services;
+using FinanceAndBudgetTracking.API.Identity;
 
 namespace FinanceAndBudgetTracking.Controllers
 {
-    [Authorize(Policy ="UserMustHaveId")]
+    [Authorize(Policy = IdentityData.AppUserPolicyName)]
     [Route("api/categories")]
     [ApiController]
     public class CategoryController : ControllerBase

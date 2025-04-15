@@ -37,7 +37,7 @@ public class HomeController : Controller
         if (response == null || string.IsNullOrEmpty(response.Token))
         {
             ModelState.AddModelError(string.Empty, "Invalid credentials");
-            return View(model);
+            return View("Index", "Dashboard");
         }
 
         // Save token and user in session

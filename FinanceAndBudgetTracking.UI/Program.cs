@@ -36,6 +36,7 @@ namespace FinanceAndBudgetTracking.UI
 
             builder.Services.AddScoped<IAuthService, AuthService>(); // Corrected
             builder.Services.AddScoped<ITransactionService, TransactionService>(); // optional
+            builder.Services.AddScoped<IDashboardService, DashboardService>();
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddTransient<JwtHandler>();
 
