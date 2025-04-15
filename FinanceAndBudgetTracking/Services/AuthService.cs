@@ -1,6 +1,10 @@
-﻿namespace FinanceAndBudgetTracking.Services
+﻿using FinanceAndBudgetTracking.API.Services;
+using FinanceAndBudgetTracking.DataLayer.Entities;
+using FinanceAndBudgetTracking.Models.DTO;
+
+namespace FinanceAndBudgetTracking.Services
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         public AuthService() { }
 
@@ -20,6 +24,25 @@
                 if (computedHash[i] != storedHash[i]) return false;
             }
             return true;
+        }
+        public bool IsValidPassword(string inputPassword, AppUser user)
+        {
+            return VerifyPasswordHash(inputPassword, user.PasswordHash, user.SaltHash);
+        }
+
+        public LoginResponseDTO CreateLoginResponse(AppUser user, string token)
+        {
+            return new LoginResponseDTO
+            {
+                Token = token,
+                User = new UserDTO
+                {
+                    AppUserId = user.AppUserId,
+                    Name = user.Name,
+                    Email = user.Email, 
+                    Success = true
+                }
+            };
         }
     }
 }

@@ -5,6 +5,8 @@ using FinanceAndBudgetTracking.UI.Services.Interfaces;
 using FinanceAndBudgetTracking.UI.ViewModels;
 using FinanceAndBudgetTracking.Models.DTO;
 using Microsoft.Win32;
+using System.Security.Claims;
+using System.Text.Json;
 
 namespace FinanceAndBudgetTracking.UI.Controllers;
 
@@ -30,21 +32,18 @@ public class HomeController : Controller
         if (!ModelState.IsValid)
             return View(model);
 
-        var result = await _authService.LoginAsync(model.LoginRequest);
-        var viewModel = new LoginRegisterViewModel
+        var response = await _authService.LoginAsync(model.LoginRequest);
+
+        if (response == null || string.IsNullOrEmpty(response.Token))
         {
-            LoginResponse = result,
-            LoginRegister = new RegisterDTO()
-        }
-        ;
-        if (result.Success)
-        {
-            return RedirectToAction("Index", "Dashboard");
+            ModelState.AddModelError(string.Empty, "Invalid credentials");
+            return View(model);
         }
 
-
-        ModelState.AddModelError("", "Invalid login attempt");
-        return View("Index",model);
+        // Save token and user in session
+        HttpContext.Session.SetString("JWT", response.Token);
+        HttpContext.Session.SetString("AuthResponseUser", JsonSerializer.Serialize(response.User));
+        return RedirectToAction("Index", "Dashboard");
     }
 
     public async Task<IActionResult> Register(LoginRegisterViewModel model)

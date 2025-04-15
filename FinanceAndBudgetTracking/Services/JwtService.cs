@@ -1,5 +1,8 @@
 ﻿namespace FinanceAndBudgetTracking.Services
 {
+    using FinanceAndBudgetTracking.API.Services;
+    using FinanceAndBudgetTracking.DataLayer.Entities;
+    using FinanceAndBudgetTracking.Models.DTO;
     using Microsoft.Extensions.Configuration;
     using Microsoft.IdentityModel.Tokens;
     using System;
@@ -8,7 +11,7 @@
     using System.Security.Cryptography.X509Certificates;
     using System.Text;
 
-    public class JwtService
+    public class JwtService: IJwtService
     {
         private readonly string _secret;
         private readonly string _issuer;
@@ -22,29 +25,35 @@
             _audience = configuration["JwtSettings:Audience"];
         }
 
-        public string GenerateToken(string username, string id) 
+        public string GenerateToken(AppUser user) 
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_secret);
 
-            var claims = new ClaimsIdentity(new[]
+            var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, id),  // ✅ this is what ASP.NET expects
-                new Claim(ClaimTypes.Email, username),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            });
+                new Claim(JwtRegisteredClaimNames.Sub, user.AppUserId.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Email),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim("AppUser", "true"),  // for AppUserPolicy
+                new Claim("AdminUser", "true") // for AdminUserPolicy
+            };
+
+            var identity = new ClaimsIdentity(claims);
+            var key = new SymmetricSecurityKey (Encoding.UTF8.GetBytes(_secret));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = claims,
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                Subject = identity,
+                Expires = DateTime.UtcNow.AddHours(2),
+                SigningCredentials = creds,
                 Issuer = _issuer,
                 Audience = _audience
             };
 
+            var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

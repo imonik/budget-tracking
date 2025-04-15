@@ -8,18 +8,53 @@
     ViewData["Title"] = "Dashboard";
 }
 <div class="text-center">
-    <h1 class="display-4">Welcome After User Logged In @Model.User.Name! </h1>
+    <h1 class="display-4">Welcome @Model.User.Name! </h1>
 </div>
 <div>
     <h2>Categories</h2>
 
-    <ul>
-       
-        @foreach (var category in Model.CategoryList)
-        {
-            <li>@category.Name</li>
-        }
-    </ul>
-
-
+    
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                @Html.DropDownList("CategoryId", new SelectList(Model.CategoryList, "CategoryId", "Name"), "Select Category", new { @class = "form-control" })
+            </div>
+            <div class="col">
+                <h3>Transactions</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>social</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                Column
+            </div>
+        </div>
+    </div>
 </div>

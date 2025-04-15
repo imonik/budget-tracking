@@ -1,9 +1,8 @@
-﻿using System.Security.Claims;
-using FinanceAndBudgetTracking.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using FinanceAndBudgetTracking.DataLayer.Interfaces;
 using FinanceAndBudgetTracking.Models.DTO;
 using FinanceAndBudgetTracking.DataLayer.Entities;
+using FinanceAndBudgetTracking.API.Services;
 
 namespace FinanceAndBudgetTracking.Controllers
 {
@@ -11,11 +10,11 @@ namespace FinanceAndBudgetTracking.Controllers
     [ApiController]
     public class AuthenticatorController : ControllerBase
     {
-        private readonly JwtService _jwtService;
-        private readonly AuthService _auth;
+        private readonly IJwtService _jwtService;
+        private readonly IAuthService _auth;
         private readonly IAppUserRepository _appUserRepository;
 
-        public AuthenticatorController(JwtService jtwService, AuthService auth, IAppUserRepository appUserRepository)
+        public AuthenticatorController(IJwtService jtwService, IAuthService auth, IAppUserRepository appUserRepository)
         {
             _jwtService = jtwService;
             _auth = auth;
@@ -49,7 +48,7 @@ namespace FinanceAndBudgetTracking.Controllers
             };
 
             var newUser = await _appUserRepository.RegisterAsync(user);
-            var token = _jwtService.GenerateToken(model.Email, newUser.AppUserId.ToString());
+            var token = _jwtService.GenerateToken(newUser);
 
             return Ok(new {token});
         }
@@ -58,40 +57,15 @@ namespace FinanceAndBudgetTracking.Controllers
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
         {
             if (!ModelState.IsValid)
-            {
-                return BadRequest("User already exists");
-            }
-            var existingUser = await _appUserRepository.GetByEmailAsync(model.Email);
+                return BadRequest("Invalid request data");
 
-            if (existingUser == null)
-            {
+            var user = await _appUserRepository.GetByEmailAsync(model.Email);
+            if (user == null || !_auth.IsValidPassword(model.Password, user))
                 return Unauthorized("Invalid credentials");
-            }
 
-            if (!_auth.VerifyPasswordHash(model.Password, existingUser.PasswordHash, existingUser.SaltHash))
-            {
-                return Unauthorized("Invalid credentials");
-            }
-
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Email, existingUser.Email),
-                new Claim(ClaimTypes.NameIdentifier, existingUser.AppUserId.ToString()),
-                new Claim(ClaimTypes.Role, "User")
-            };
-
-            var token = _jwtService.GenerateToken(model.Email, existingUser.AppUserId.ToString());
-            var loginResponse = new LoginResponseDTO
-            {
-                Token = token,
-                User = new UserDTO
-                {
-                    AppUserId = existingUser.AppUserId,
-                    Name = existingUser.Name,
-                    Email = existingUser.Email
-                }
-            };
-            return Ok(loginResponse);
+            var token = _jwtService.GenerateToken(user);
+            var response = _auth.CreateLoginResponse(user, token);
+            return Ok(response);
         }
 
         [HttpPost("logout")]

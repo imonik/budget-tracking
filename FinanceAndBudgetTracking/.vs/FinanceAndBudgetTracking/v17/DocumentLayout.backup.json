@@ -3,36 +3,66 @@
   "WorkspaceRootPath": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking\\controllers\\authenticatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|solutionrelative:controllers\\authenticatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\jwthandler .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\interfaces\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BF4D4FA-3D7D-463D-BAF2-A712672C93C6}|..\\FinanceAndBudgetTracking.Models\\FinanceAndBudgetTracking.Models.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.models\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\views\\transaction\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06AB837-5181-464C-9A94-9A8705E5BF3A}|FinanceAndBudgetTracking.API.csproj|solutionrelative:controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\views\\transaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F86E1F5-5FF5-442B-9C57-E6B41CA36D10}|..\\FinanceAndBudgetTracking.UI\\FinanceAndBudgetTracking.UI.csproj|c:\\users\\monic\\repos\\budget-tracking\\financeandbudgettracking.ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,85 +72,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T15:24:15.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JwtHandler .cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\JwtHandler .cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\JwtHandler .cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\JwtHandler .cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\JwtHandler .cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwAYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T14:14:10.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\ApiService.cs",
               "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\ApiService.cs",
               "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\ApiService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T17:59:07.958Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-04-15T14:08:07.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
               "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:53:48.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:53:48.329Z",
+              "WhenOpened": "2025-04-11T15:49:09.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.Models\\DTO\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.Models\\DTO\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.Models\\DTO\\RegisterDTO.cs",
-              "RelativeToolTip": "..\\FinanceAndBudgetTracking.Models\\DTO\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowCIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:09:04.004Z",
+              "WhenOpened": "2025-04-10T19:35:28.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:34:48.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "AuthenticatorController.cs",
               "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Controllers\\AuthenticatorController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthenticatorController.cs",
               "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Controllers\\AuthenticatorController.cs",
               "RelativeToolTip": "Controllers\\AuthenticatorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T23:04:48.201Z",
+              "WhenOpened": "2025-04-15T13:23:42.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAOAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\Index.cshtml",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\Index.cshtml",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T23:03:50.308Z",
+              "WhenOpened": "2025-04-14T19:52:35.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Services\\JwtService.cs",
+              "RelativeToolTip": "Services\\JwtService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAxwB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T13:38:12.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Program.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Program.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Program.cs*",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Program.cs*",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwDEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T14:16:08.378Z",
               "EditorCaption": ""
             },
             {
@@ -131,49 +212,113 @@
               "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\IAuthService.cs",
               "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T00:18:14.982Z",
+              "WhenOpened": "2025-04-15T15:21:43.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
+              "Title": "View.cshtml",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\View.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\View.cshtml",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\View.cshtml",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Views\\Transaction\\View.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T20:35:30.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T16:53:48.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IApiService.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\IApiService.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\IApiService.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\IApiService.cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\IApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T20:10:23.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransactionController.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "Controllers\\TransactionController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T17:11:48.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Controllers\\TransactionController.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Controllers\\TransactionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:37:11.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\ITransactionService.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\ITransactionService.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\ITransactionService.cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\Interfaces\\ITransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T20:09:10.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\TransactionService.cs",
+              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\TransactionService.cs",
+              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\TransactionService.cs",
+              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\TransactionService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T20:09:34.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Views\\Dashboard\\Index.cshtml",
               "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Views\\Dashboard\\Index.cshtml",
               "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAvwBYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T00:03:44.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
-              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Services\\AuthService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowC0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T16:34:48.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "..\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\monic\\Repos\\budget-tracking\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "..\\FinanceAndBudgetTracking.UI\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAiwDYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T15:04:13.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T00:03:44.44Z"
             }
           ]
         }

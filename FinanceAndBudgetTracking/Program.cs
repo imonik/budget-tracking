@@ -1,4 +1,6 @@
 ﻿using System.Text;
+using FinanceAndBudgetTracking.API.Identity;
+using FinanceAndBudgetTracking.API.Services;
 using FinanceAndBudgetTracking.DataLayer.Interfaces;
 using FinanceAndBudgetTracking.DataLayer.Repositories;
 using FinanceAndBudgetTracking.DataLayer.Services;
@@ -15,6 +17,12 @@ builder.Services.AddScoped<IAppUserRepository, AppUserRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IBudgetRepository, BudgetRepository>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+
+
 
 // Load the configuration from the appsettings.json file
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
@@ -84,6 +92,15 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy(IdentityData.AdminUserPolicyName, p =>
+        p.RequireClaim(IdentityData.AdminUserClaimName, "true"));
+
+    options.AddPolicy(IdentityData.AppUserPolicyName, policy =>
+    policy.RequireClaim(IdentityData.AppUserClaimName, "true"));
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -93,7 +110,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-builder.Services.AddAuthorization();
+
 
 app.UseHttpsRedirection();
 
