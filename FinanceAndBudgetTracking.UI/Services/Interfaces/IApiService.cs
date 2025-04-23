@@ -5,6 +5,7 @@ namespace FinanceAndBudgetTracking.UI.Services.Interfaces
     public interface IApiService
     {
         Task<T?> GetAsync<T>(string endpoint);
+        Task<T?> GetByIdAsync<T>(string endpoint, int data);
         Task<TResponse?> PostAsync<TRequest, TResponse>(string endpoint, TRequest data);
         Task<HttpResponseMessage> DeleteAsync(string endpoint);
         Task<TResponse?> PutAsync<TRequest, TResponse>(string endpoint, TRequest data);

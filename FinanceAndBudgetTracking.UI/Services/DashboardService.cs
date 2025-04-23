@@ -22,7 +22,7 @@ namespace FinanceAndBudgetTracking.UI.Services
             {
                 dashboard.User = JsonSerializer.Deserialize<UserDTO>(userJson);
             }
-            dashboard.CategoryList = await _apiService.GetAsync<List<CategoryDTO>>("categories/getall");            
+            dashboard.CategoryList = await _apiService.GetAsync<List<CategoryDTO>>("categories/getallbyuser");            
             
             return dashboard;
         }

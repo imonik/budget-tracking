@@ -35,7 +35,7 @@ namespace FinanceAndBudgetTracking.Controllers
             return Ok(categories);
         }
 
-        [HttpGet("getall")]
+        [HttpGet("getgeneral")]
         public async Task<IActionResult> GetGeneralCategories()
         {
             var userId = _currentUser.GetUserId();
@@ -45,34 +45,34 @@ namespace FinanceAndBudgetTracking.Controllers
             return Ok(category);
         }
 
-        [HttpGet("category/{id}")]
+        [HttpGet("detail/{id}")]
         public async Task<IActionResult> GetCategoryById(int id)
         {
             var userId = _currentUser.GetUserId();
             if (userId == null) return Unauthorized();
 
-            var category = await _categoryRepository.GetCategoryById(id);
+            var category = await _categoryRepository.GetCategoryById((int)userId, id);
             return Ok(category);
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddCategory([FromBody] UserCategoryDTO category)
+        public async Task<IActionResult> AddCategory([FromBody] Models.DTO.UserCategoryDTO category)
         {
             var userId = _currentUser.GetUserId();
             if (userId == null) return Unauthorized();
 
-            var newcategory = new UserCategory { Name = category.Name, UserId = userId.Value, CreatedOn = DateTime.Now, ModifiedOn = DateTime.Now };
+            var newcategory = new DataLayer.Entities.UserCategoryDTO { Name = category.Name, UserId = userId.Value, CreatedOn = DateTime.Now, ModifiedOn = DateTime.Now };
             var savedCategory = await _categoryRepository.AddCategory(newcategory);
             return Ok(savedCategory);
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCategory([FromBody] UserCategoryDTO category)
+        public async Task<IActionResult> UpdateCategory([FromBody] Models.DTO.UserCategoryDTO category)
         {
             var userId = _currentUser.GetUserId();
             if (userId == null) return Unauthorized();
 
-            var updatedCategory = new UserCategory { CategoryId = category.CategoryId, Name = category.Name, UserId = userId.Value, ModifiedOn = DateTime.Now };
+            var updatedCategory = new DataLayer.Entities.UserCategoryDTO { CategoryId = category.CategoryId, Name = category.Name, UserId = userId.Value, ModifiedOn = DateTime.Now };
             var savedCategory = await _categoryRepository.UpdateCategory(updatedCategory);
             return Ok(savedCategory);
         }

@@ -4,11 +4,11 @@ namespace FinanceAndBudgetTracking.DataLayer.Interfaces
 {
     public interface ICategoryRepository
     {
-        Task<UserCategory?> AddCategory(UserCategory category);
-        Task<UserCategory> GetCategoryById(int categoryId);
-        Task<int> UpdateCategory(UserCategory category);
-        Task<UserCategory> DeleteCategory(int categmoryId);
-        Task<IEnumerable<UserCategory>> GetAllCategoriesByUser(int userId);
+        Task<UserCategoryDTO?> AddCategory(UserCategoryDTO category);
+        Task<UserCategoryDTO> GetCategoryById(int userId, int categoryId);
+        Task<int> UpdateCategory(UserCategoryDTO category);
+        Task<UserCategoryDTO> DeleteCategory(int categmoryId);
+        Task<IEnumerable<UserCategoryDTO>> GetAllCategoriesByUser(int userId);
         Task<IEnumerable<Category>> GetAllGeneralCategories();
     }
 }

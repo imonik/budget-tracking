@@ -15,4 +15,8 @@
     <ProjectReference Include="..\FinanceAndBudgetTracking.Models\FinanceAndBudgetTracking.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Budget\" />
+  </ItemGroup>
+
 </Project>

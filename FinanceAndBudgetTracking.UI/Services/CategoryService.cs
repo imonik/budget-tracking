@@ -11,9 +11,9 @@ namespace FinanceAndBudgetTracking.UI.Services
         {
             _apiService = apiService;
         }
-        public async Task<CategoryDTO> AddCategoryAsync(CategoryDTO category)
+        public async Task<UserCategoryDTO> AddCategoryAsync(UserCategoryDTO category)
         {
-            var response = await _apiService.PostAsync<CategoryDTO, CategoryDTO>("categories/add", category);
+            var response = await _apiService.PostAsync<UserCategoryDTO, UserCategoryDTO>("categories/add", category);
             return response;
         }
 
@@ -22,19 +22,22 @@ namespace FinanceAndBudgetTracking.UI.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<CategoryDTO>> GetCategoriesByUserAsync()
+        public async Task<List<UserCategoryDTO>> GetCategoriesByUserAsync()
         {
-            throw new NotImplementedException();
+            var response = await _apiService.GetAsync<List<UserCategoryDTO>>("categories/getallbyuser");
+            return response;
         }
 
-        public Task<CategoryDTO?> GetCategoryByIdAsync(int id)
+        public async Task<UserCategoryDTO?> GetCategoryByIdAsync(int userId, int categoryId)
         {
-            throw new NotImplementedException();
+            var response = await _apiService.GetByIdAsync<UserCategoryDTO>("categories/detail", categoryId);
+            return response;
         }
 
-        public Task<bool> UpdateCategoryAsync(CategoryDTO category)
+        public async Task<int> UpdateCategoryAsync(UserCategoryDTO category)
         {
-            throw new NotImplementedException();
+            var response = await _apiService.PutAsync<UserCategoryDTO, int>("categories/updatecategory", category);//GetByIdAsync<UserCategoryDTO>("categories/detail", categoryId);
+            return response;
         }
     }
 }

@@ -6,14 +6,15 @@ using FinanceAndBudgetTracking.DataLayer.Interfaces;
 using FinanceAndBudgetTracking.DataLayer.Entities;
 using FinanceAndBudgetTracking.Models.DTO;
 using FinanceAndBudgetTracking.API.Services;
+using FinanceAndBudgetTracking.API.Identity;
 
 
 namespace FinanceAndBudgetTracking.Controllers
 {
 
-    [Authorize(Policy = "UserMustHaveId")]
+    [Authorize(Policy = IdentityData.AppUserPolicyName)]
     [ApiController]
-    [Route("api/tran")]
+    [Route("api/transaction")]
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionRepository _transactionRepository;

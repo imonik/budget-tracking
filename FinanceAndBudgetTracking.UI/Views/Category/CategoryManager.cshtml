@@ -1,38 +1,53 @@
 ﻿@using FinanceAndBudgetTracking.Models.DTO
 @using FinanceAndBudgetTracking.UI.ViewModels
 
-@model CategoryDTO;
+@model List<UserCategoryDTO>
 
 @{
-    ViewData["Title"] = "Dashboard";
+    ViewData["Title"] = "Categories";
 }
-<div class="container text-center">
-    <div class="row">
-        <div class="col">
+<div class="container-fluid">
+    <div class="row card">
+        <div class="col card-body">
+            <form asp-controller="Category" asp-action="Create" method="post">
+                <div class="mb-3">
+                    <label for="Name">Name:</label>
+                    <input type="text" data-val="true"
+                    data-val-required="Name field is required."
+                    id="CategoryName" name="CategoryName" value=""><br>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn-primary">Create category</button>
+                </div>
+            </form>
         </div>
-        <div class="col">
-            <h3>Transactions</h3>
+    </div>
+    <div class="row card">
+        <div class="col card-body">
+            <h3>Categories</h3>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>mdo</td>
-                    </tr>
+                    @foreach (var category in Model)
+                    {
+                        <tr>
+                            <td>@category.Name</td>
+                            <td>
+                                <a href="Details/@category.CategoryId">Details</a>
+                                @if (@category.UserId != -1) 
+                                {
+                                    <a href="Category/Delete/@category.CategoryId">Delete</a>
+                                }
+                            </td>
+                        </tr>
+                    }
                 </tbody>
             </table>
-        </div>
-        <div class="col">
-            Column
         </div>
     </div>
 </div>

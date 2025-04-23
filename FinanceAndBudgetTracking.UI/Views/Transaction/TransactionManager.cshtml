@@ -1,0 +1,85 @@
+﻿@using FinanceAndBudgetTracking.UI.ViewModels
+
+@model TransactionViewModel
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+<div class="container-fluid">
+    <div class="row card">
+        <div class="col card-body">
+            <form asp-controller="Transaction" asp-action="Create" method="post">
+                <div class="mb-3">
+                    <label for="TransactionType">
+                        @Html.RadioButton("TransactionType", "1", false, new { @class = "form-check-input" })
+                        Income
+                    </label>
+                    <label for="TransactionType">
+                        @Html.RadioButton("TransactionType", "0", false, new { @class = "form-check-input" })
+                        Income
+                    </label>
+                </div>
+                <div class="mb-3">
+                    <label for="Category">Category:</label>
+                    <div class="col">
+                        @Html.DropDownList("CategoryId", new SelectList(Model.CategoryList, "CategoryId", "Name"), "Select Category", new { @class = "form-control" })
+                    </div>
+                </div>
+                 <div class="mb-3">
+                    <label for="Amount">Amount :</label>
+                    <input type="text" data-val="true"
+                           data-val-required="Name field is required."
+                           id="Amount" name="Amount" value=""><br>
+                </div>
+                <div class="mb-3">
+                    <label for="Name">Name:</label>
+                    <input type="date" data-val="true"
+                           data-val-required="Date field is required."
+                           id="Date" name="Date" value=""><br>
+                </div>
+                <div class="mb-3">
+                    <label for="Description">Description:</label>
+                    <input type="text" data-val="true"
+                           data-val-required="Date field is required."
+                           id="Description" name="Description" value=""><br>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn-primary">Create transaction</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row card">
+        <div class="col card-body">
+            <h3>Categories</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Type</th>
+						<th scope="col">Category</th>
+						<th scope="col">Amount</th>
+						<th scope="col">Description</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var transaction in Model.Transactions)
+                    {
+                        <tr>
+                            <td>@transaction.Date</td>
+                            <td>@transaction.Type</td>
+                            <td>@transaction.CategoryId</td>
+                            <td>@transaction.Amount</td>
+                            <td>@transaction.Description</td>
+                            <td>
+                                <a href="Details/@transaction.TransactionId">Details</a>
+                                <a href="Category/Delete/@transaction.TransactionId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

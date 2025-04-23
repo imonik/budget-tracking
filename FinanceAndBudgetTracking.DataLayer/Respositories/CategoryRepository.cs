@@ -14,11 +14,11 @@ namespace FinanceAndBudgetTracking.DataLayer.Repositories
             _context = context;
         }
 
-        public async Task<UserCategory?> AddCategory(UserCategory usercategory)
+        public async Task<UserCategoryDTO?> AddCategory(UserCategoryDTO usercategory)
         {
             try
             {
-                var newUserCategory =  _context.UserCategories.Add(usercategory);
+                var newUserCategory = _context.UserCategories.Add(usercategory);
                 await _context.SaveChangesAsync();
                 return newUserCategory.Entity;
             }
@@ -35,7 +35,7 @@ namespace FinanceAndBudgetTracking.DataLayer.Repositories
             }
         }
 
-        public async Task<UserCategory> DeleteCategory(int categoryId)
+        public async Task<UserCategoryDTO> DeleteCategory(int categoryId)
         {
             try
             {
@@ -62,11 +62,20 @@ namespace FinanceAndBudgetTracking.DataLayer.Repositories
             }
         }
 
-        public async Task<IEnumerable<UserCategory>> GetAllCategoriesByUser(int userId)
+        public async Task<IEnumerable<UserCategoryDTO>> GetAllCategoriesByUser(int userId)
         {
             try
             {
-                return await _context.UserCategories.Where(c => c.UserId == userId).ToListAsync();
+                var generalCats = await _context.Categories.Select(c => new UserCategoryDTO
+                    {
+                        CategoryId = c.CategoryId,
+                        Name = c.Name,
+                        UserId = -1,
+                    }).ToListAsync();
+
+                    var userCats = await _context.UserCategories.ToListAsync();
+                    var allCats = generalCats.Concat(userCats);
+                    return allCats;
 
             }
             catch (Exception ex)
@@ -89,16 +98,15 @@ namespace FinanceAndBudgetTracking.DataLayer.Repositories
             }
             catch (Exception ex)
             {
-                // Catch other unexpected exceptions
                 throw new ApplicationException("An unexpected error occurred while retrieving the transaction.", ex);
             }
         }
 
-        public async Task<UserCategory> GetCategoryById(int categoryId)
+        public async Task<UserCategoryDTO> GetCategoryById(int userId, int categoryId)
         {
             try
             {
-                var userCategory = await _context.UserCategories.FindAsync(categoryId);
+                var userCategory = await _context.UserCategories.Where(c => c.UserId == userId && c.CategoryId == categoryId).FirstOrDefaultAsync();
                 if (userCategory == null)
                 {
                     throw new ApplicationException("Category not found");
@@ -112,7 +120,7 @@ namespace FinanceAndBudgetTracking.DataLayer.Repositories
             }
         }
 
-        public async Task<int> UpdateCategory(UserCategory category)
+        public async Task<int> UpdateCategory(UserCategoryDTO category)
         {
             try
             {
@@ -121,8 +129,6 @@ namespace FinanceAndBudgetTracking.DataLayer.Repositories
                 {
                     throw new ApplicationException("Category not found");
                 }
-                //var updatedCategory = _context.UserCategories.Update(category);
-                // ✅ Update properties manually
                 userCategory.Name = category.Name;
                 userCategory.ModifiedOn = DateTime.UtcNow;
                 await _context.SaveChangesAsync();

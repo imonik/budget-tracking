@@ -1,12 +1,13 @@
 ﻿using FinanceAndBudgetTracking.Models.DTO;
+using FinanceAndBudgetTracking.UI.ViewModels;
 
 namespace FinanceAndBudgetTracking.UI.Services.Interfaces
 {
     public interface ITransactionService
     {
-        Task<List<TransactionDTO>> GetTransactionsByUserAsync();
+        Task<TransactionViewModel> GetTransactionsByUserAsync();
         Task<TransactionDTO?> GetTransactionByIdAsync(int id);
-        Task<bool> AddTransactionAsync(TransactionDTO transaction);
+        Task<TransactionDTO> AddTransactionAsync(TransactionDTO transaction);
         Task<bool> UpdateTransactionAsync(TransactionDTO transaction);
         Task<bool> DeleteTransactionAsync(int id);
     }

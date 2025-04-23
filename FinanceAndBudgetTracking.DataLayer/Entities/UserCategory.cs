@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FinanceAndBudgetTracking.DataLayer.Entities;
 
-public partial class UserCategory
+public partial class UserCategoryDTO
 {
     public int CategoryId { get; set; }
 

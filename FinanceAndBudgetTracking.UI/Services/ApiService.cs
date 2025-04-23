@@ -49,6 +49,16 @@ namespace FinanceAndBudgetTracking.UI.Services
         {
             return await _httpClient.DeleteAsync(endpoint);
         }
-    
+
+        public async Task<T?> GetByIdAsync<T>(string endpoint, int data)
+        {
+            var response = await _httpClient.GetAsync($"{endpoint}/{data}");
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadFromJsonAsync<T>();
+            }
+
+            return default;
+        }
     }
 }

@@ -1,36 +1,56 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
+using FinanceAndBudgetTracking.Models.DTO;
+using FinanceAndBudgetTracking.UI.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinanceAndBudgetTracking.UI.Controllers
 {
     public class CategoryController : Controller
     {
-        // GET: CategoryController
-        public ActionResult CategoryManager()
+        private readonly ICategoryService _categoryService;
+
+        public CategoryController(ICategoryService categoryService)
         {
-            return View();
+            _categoryService = categoryService;
+        }
+        // GET: CategoryController
+        public async Task<ActionResult> CategoryManagerAsync()
+        {
+            var categories = await _categoryService.GetCategoriesByUserAsync();
+            return View(categories);
         }
 
+
         // GET: CategoryController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
-            return View();
+            var category = await _categoryService.GetCategoryByIdAsync(1,id);
+            if (category == null)
+            {
+                return NotFound(); // or RedirectToAction("Index");
+            }
+            return View(category);
         }
 
         // GET: CategoryController/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create(UserCategoryDTO category)
         {
-            return View();
+            await _categoryService.AddCategoryAsync(category);
+            return View("CategoryManager");
         }
 
         // POST: CategoryController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(IFormCollection collection)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var newCategory = new UserCategoryDTO() { CategoryId = 0, Name = collection["CategoryName"] };
+                var a  = await _categoryService.AddCategoryAsync(newCategory);
+
+                return RedirectToAction(nameof(CategoryManagerAsync));
             }
             catch
             {
@@ -39,19 +59,23 @@ namespace FinanceAndBudgetTracking.UI.Controllers
         }
 
         // GET: CategoryController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var category = await _categoryService.GetCategoryByIdAsync(1, id);
+            return View(category);
         }
 
         // POST: CategoryController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, IFormCollection collection)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var newCategory = new UserCategoryDTO() { CategoryId = 0, Name = collection["CategoryName"] };
+                var a = await _categoryService.AddCategoryAsync(newCategory);
+
+                return RedirectToAction(nameof(CategoryManagerAsync));
             }
             catch
             {
@@ -60,18 +84,21 @@ namespace FinanceAndBudgetTracking.UI.Controllers
         }
 
         // GET: CategoryController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
+            await _categoryService.DeleteCategoryAsync(id);
             return View();
         }
 
         // POST: CategoryController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id, IFormCollection collection)
         {
             try
             {
+                var deleted = await _categoryService.DeleteCategoryAsync(id);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
